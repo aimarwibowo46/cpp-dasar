@@ -5,8 +5,9 @@ using namespace std;
 int main() {
 	
 	// array <tipe data, jumlah array> nama array
-	
 	array<int, 5> nilai;
+	
+	// looping array cara standard
 	for(int i = 0; i < 5; i++) {
 		nilai[i] = i;
 		cout << "Nilai [" << i << "] adalah " << nilai[i] << ", Address [" << i << "] adalah " << &nilai[i] 
@@ -21,7 +22,7 @@ int main() {
 	cout << "Address akhir array = " << nilai.end() << endl;
 	
 	
-	// cara lain menampilkan isi array
+	// looping array menggunakan keyword auto yg berupa pointer
 	for(auto it = nilai.begin(); it != nilai.end(); it++) {
 		cout << *it << endl;
 	}

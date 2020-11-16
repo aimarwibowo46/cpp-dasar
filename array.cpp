@@ -27,7 +27,27 @@ int main() {
 	cout << &nilai[4] << " Nilainya adalah: " << nilai[4] << endl << endl;
 	
 	cout << "Ukuran dari array: " << sizeof(nilai) << " byte" << endl; // Size array = size int * jml member
-	cout << "Jumlah member array: " << sizeof(nilai) / sizeof(int) << endl;
+	cout << "Jumlah member array: " << sizeof(nilai) / sizeof(int) << endl << endl;
+	
+	
+	// looping array untuk menampilkan isi array
+	
+	for(int i = 0; i < 5; i++) {
+		cout << nilai[i] << endl;
+	}
+	cout << endl;
+	
+	
+	// looping array untuk c++ 11 ke atas
+	/*
+		for(deklarasi variabel : nama array) {
+			statement
+		}
+	*/
+	
+	for(int i : nilai) {
+		cout << i << endl;
+	}
 	
 	return 0;
 }
