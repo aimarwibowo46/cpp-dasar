@@ -1,5 +1,5 @@
 #include <iostream>
-#include <list>
+#include <list> // doubly linked list
 using namespace std;
 
 bool is_small_num(const int& value) { return value < 50; }

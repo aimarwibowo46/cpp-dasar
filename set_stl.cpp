@@ -4,12 +4,15 @@ using namespace std;
 
 int main()
 {
-   set<int> mySet;
+   set<int> mySet; // default increasing order
+   set<int, greater<int>> mySet2; // decreasing order
+
     for (int i = 1 ; i <= 10 ; i++)
     {
         // 1-10 masing-masing hanya disimpan 1x
-        for (int j = 1 ; j <= 10 ; j++)
+        for (int j = 1 ; j <= 10 ; j++) {
             mySet.insert(i); 
+        }
     }
 
     cout << "ukuran set sekarang : " << mySet.size() << endl;
@@ -26,6 +29,12 @@ int main()
             cout << i << " ada di dalam set" << endl;
         else
             cout << i << " tidak ada di dalam set" << endl;
+    }
+
+    if(mySet.find(100) == mySet.end()) { // find akan return pointer setelah elemen terakhir jika elemen tidak ditemukan
+        cout << "100 tidak ada di dalam set" << endl;
+    } else {
+        cout << "100 ada di dalam set" << endl;
     }
 
     set<int>::iterator lo,hi;

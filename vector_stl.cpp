@@ -62,7 +62,7 @@ int main()
     // menghapus elemen ke-2
     angka.erase(angka.begin() + 1);
 
-    // menghapus elemen ke-2 hingga elemen ke-5
+    // menghapus elemen ke-2 hingga sebelum elemen ke-5 (elemen ke 4)
     angka.erase(angka.begin() + 1, angka.begin() + 4);
 
     cout << "Isi vector \"angka\" setelah erase:";
@@ -109,8 +109,9 @@ int main()
     for (int i = 0 ; i < 5 ; i++)
         cout << " "  << toSort[i];                  //1 2 3 4 5
     cout << endl;
-    lo = lower_bound(toSort.begin(),toSort.end(),3);//    ^
-    hi = upper_bound(toSort.begin(),toSort.end(),3);//      ^
+    lo = lower_bound(toSort.begin(),toSort.end(),3);// lower bound : lebih besar sama dengan
+    hi = upper_bound(toSort.begin(),toSort.end(),3);// upper bound : lebih dari
+    // lower bound dan upper bound harus di sort dulu
 
     cout << "index lower_bound : " << (lo - toSort.begin()) << endl;
     cout << "index upper_bound : " << (hi - toSort.begin()) << endl;
