@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// enum dapat dipakai ketika :
+// menginginkan variabel enum hanya dapat diisi dengan pilihan yang ada
+
 enum gender {
 	male,
 	female
